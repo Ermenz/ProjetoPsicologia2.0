@@ -1,0 +1,22 @@
+import flet as ft
+
+def main(page: ft.Page):
+    ola = ft.Text(value="Aba Psicologia!", size=50) #size = tamanho do texto
+    page.controls.append(ola) 
+    
+    botao (page)
+    page.update()
+
+def botao(possibilidade: ft.Page):
+    entrada_nome = ft.TextField(label= "Nome")
+    entrada_senha = ft.TextField(label="senha", password=True)
+
+    possibilidade.add(
+        entrada_nome,
+        entrada_senha,
+        ft.ElevatedButton("Enviar!")
+    )
+
+
+print("Iniciando a aplicação Flet...")
+ft.app(target=main)
